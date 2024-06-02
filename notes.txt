@@ -1,0 +1,14 @@
+I. SETUP NODEJS PROJECT
+//SHIFT + ALT + F => Format code on windows
+1. npm init --y //can be used to set up a new or existing npm package
+
+//install express: https://www.npmjs.com/package/express. Express is a lightweight framework for nodejs. 
+//Design to build apps easy. It support middleware, routing, template, error handling 
+// install morgan: https://www.npmjs.com/package/morgan. morgan is a middleware of express.js. It using for logging http requests
+2. npm i express morgan mongoose
+3. npm i nodemon -D //using nodemon for automatically restart apps
+
+
+//Start application
+npm run start (or node app.js)
+
