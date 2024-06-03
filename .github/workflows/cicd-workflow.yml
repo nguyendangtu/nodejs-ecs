@@ -10,7 +10,7 @@ env:
   ECR_REPOSITORY: "nodejs-ecs"           # set this to your Amazon ECR repository name
   ECS_SERVICE: "nodejs-ecs:latest"                 # set this to your Amazon ECS service name
   ECS_CLUSTER: "DevCluster"                 # set this to your Amazon ECS cluster name
-  ECS_TASK_DEFINITION: "nodejs-ecs-task-definition:1" # set this to the path to your Amazon ECS task definition
+  ECS_TASK_DEFINITION: "nodejs-ecs-task-definition.json" # set this to the path to your Amazon ECS task definition
                                                # file, e.g. .aws/task-definition.json
   CONTAINER_NAME: "nodejs-ecs"           # set this to the name of the container in the
                                                # containerDefinitions section of your task definition
@@ -51,14 +51,14 @@ jobs:
 
       - name: Fill in the new image ID in the Amazon ECS task definition
         id: task-def
-        uses: aws-actions/amazon-ecs-render-task-definition@c804dfbdd57f713b6c079302a4c01db7017a36fc
+        uses: aws-actions/amazon-ecs-render-task-definition@v1
         with:
           task-definition: ${{ env.ECS_TASK_DEFINITION }}
           container-name: ${{ env.CONTAINER_NAME }}
           image: ${{ steps.build-image.outputs.image }}
 
       - name: Deploy Amazon ECS task definition
-        uses: aws-actions/amazon-ecs-deploy-task-definition@df9643053eda01f169e64a0e60233aacca83799a
+        uses: aws-actions/amazon-ecs-deploy-task-definition@v1
         with:
           task-definition: ${{ steps.task-def.outputs.task-definition }}
           service: ${{ env.ECS_SERVICE }}
