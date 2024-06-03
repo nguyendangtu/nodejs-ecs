@@ -12,3 +12,11 @@ I. SETUP NODEJS PROJECT
 //Start application
 npm run start (or node app.js)
 
+
+
+
+//II. AWS
+https://www.youtube.com/watch?v=LnA0hvN_FiE
+//1. Install ECR and ECS
+//1.a config profile https://docs.aws.amazon.com/cli/latest/userguide/sso-configure-profile-token.html#sso-configure-profile-token-auto-sso
+
