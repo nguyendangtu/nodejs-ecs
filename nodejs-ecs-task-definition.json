@@ -1,8 +1,8 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-2:767398147738:task-definition/nodejs-ecs-task-definition-new:1",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-2:767398147738:task-definition/nodejs-ecs-task-definition-06042024:1",
     "containerDefinitions": [
         {
-            "name": "nodejs-ecs-new",
+            "name": "nodejs-ecs-container",
             "image": "767398147738.dkr.ecr.us-east-2.amazonaws.com/nodejs-ecs/nodejs-ecs:latest",
             "cpu": 1024,
             "memory": 3072,
@@ -26,7 +26,7 @@
                 "logDriver": "awslogs",
                 "options": {
                     "awslogs-create-group": "true",
-                    "awslogs-group": "/ecs/nodejs-ecs-task-definition-new",
+                    "awslogs-group": "/ecs/nodejs-ecs-task-definition-06042024",
                     "awslogs-region": "us-east-2",
                     "awslogs-stream-prefix": "ecs"
                 },
@@ -41,7 +41,7 @@
             ]
         }
     ],
-    "family": "nodejs-ecs-task-definition-new",
+    "family": "nodejs-ecs-task-definition-06042024",
     "executionRoleArn": "arn:aws:iam::767398147738:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
     "revision": 1,
@@ -89,7 +89,7 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2024-06-03T11:05:42.262Z",
+    "registeredAt": "2024-06-04T10:18:46.830Z",
     "registeredBy": "arn:aws:iam::767398147738:root",
     "tags": []
 }
